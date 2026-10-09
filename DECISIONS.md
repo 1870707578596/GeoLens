@@ -35,13 +35,14 @@
 - 决定：LLaMA-Factory 做 LoRA 微调；unsloth 仅作为省显存备选手段
 - 状态：采纳
 
-## D5 数据源：timm/resisc45 + BiliSakura/RSCC（经 hf-mirror 下载）
+## D5 数据源：timm/resisc45（采纳）；BiliSakura/RSCC 判定为同名不同物（废弃）
 
-- 日期：2026-10-09
+- 日期：2026-10-09（2026-10-09 修订）
 - 背景：需要地物分类图片源和中文 caption 源；本机直连 HF 受限，hf-mirror 已验证可达
 - 备选：blanchon/RESISC45、jonathan-roberts1/NWPU-RESISC45（图片源备胎）；zhao-2025/RSCC、arampacha/rsicd（caption 备胎，RSICD 为英文）
-- 决定：RESISC45 用 timm 版（下载量最高、最标准），中文描述用 BiliSakura/RSCC
-- 状态：试验中（下载进行中，落盘结构确认后转采纳）
+- 决定：RESISC45 用 timm 版——已下载（parquet 格式，31500 张），经 `05_extract_parquet.py` 解包为 imagefolder 并生成 manifest，**转采纳**
+- 修订：下载后发现 BiliSakura/RSCC（及 zhao-2025/RSCC 镜像）实为 2025 年 xBD 灾前/灾后**变化描述**数据集（英文 change captioning，license 限制仅限科研），并非预期的遥感中文图注数据集，**废弃**作为图注源；中文描述类指令改由标签模板生成（流水线自洽），英文图注备选 arampacha/rsicd；已下载的 14GB 数据暂时保留在本地（data/rscc，未入 git），未来如做 v2"灾害变化描述"方向可复用
+- 状态：图片源采纳 / RSCC(变化描述版) 废弃 / 图注源由模板替代
 
 ## D6 数据清洗策略：熵加权 + 置信度阈值（迁移论文 CFLR 思想）
 
@@ -65,4 +66,12 @@
 - 背景：实测本地为 3060 Laptop 6GB 显存
 - 备选：本地 QLoRA 兜底训练（已废弃——6GB 跑不动 2B QLoRA）；极端情况可用 SmolVLM-500M 级在本地验证流水线
 - 决定：打标/清洗/Demo 在本地（CLIP fp16 约 1G 显存；Demo 用 int4 量化约 2-3G），LoRA 微调锁定实验室 A40（校园网连接）
+- 状态：采纳
+
+## D9 CLIP 打标配置：ViT-B-16-quickgelu + "a centered satellite photo of {}."
+
+- 日期：2026-10-09
+- 背景：smoke 测试发现 open_clip 3.x 下 `ViT-B-16`+openai 权重存在 QuickGELU 激活不匹配警告，且 prompt 带冠词错误；在完整 validation 集（6300 张、45 类）上做了两组正式对照
+- 备选：plain ViT-B-16 + "a satellite photo of a {}."（57.0%）；多模板 prompt ensemble（未实施，留作改进项）
+- 决定：采用 quickgelu 变体 + CLIP 官方 RESISC45 模板，零样本精度 **58.3%**（此即过滤分析的原始标签精度基线）
 - 状态：采纳
