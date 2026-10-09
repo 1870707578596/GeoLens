@@ -149,30 +149,42 @@ def main():
     ap.add_argument("--decisions", required=True, type=Path)
     ap.add_argument("--out-clean", required=True, type=Path)
     ap.add_argument("--out-raw", required=True, type=Path)
+    ap.add_argument("--out-raw-matched", required=True, type=Path,
+                    help="等量对照组：从 raw 中随机抽取与 clean 相同数量的图片")
     ap.add_argument("--seed", type=int, default=42)
     args = ap.parse_args()
 
     rng = random.Random(args.seed)
     labels = [json.loads(l) for l in open(args.labels, encoding="utf-8") if l.strip()]
-    keep = {d["path"]: d["keep"] for d in (json.loads(l) for l in open(args.decisions, encoding="utf-8")) if l.strip()}
+    keep = {d["path"]: d["keep"] for d in (json.loads(l) for l in open(args.decisions, encoding="utf-8") if l.strip())}
 
     # 只用 train/validation 做训练数据，test 留给评测
     train_recs = [r for r in labels if "/test/" not in r["path"]]
     clean_recs = [r for r in train_recs if keep.get(r["path"], False)]
 
-    raw_out, clean_out = [], []
+    raw_out, clean_out, matched_out = [], [], []
     for rec in train_recs:
         raw_out += make_examples(rec, rng)
     for rec in clean_recs:
         clean_out += make_examples(rec, rng)
 
-    for path, data in [(args.out_clean, clean_out), (args.out_raw, raw_out)]:
+    # 等量对照：数据量与 clean 一致、不做置信度过滤（隔离"质量"与"数量"两个变量）
+    rng_match = random.Random(args.seed + 1)
+    matched_recs = rng_match.sample(train_recs, len(clean_recs)) if clean_recs else []
+    for rec in matched_recs:
+        matched_out += make_examples(rec, rng_match)
+
+    for path, data in [
+        (args.out_clean, clean_out),
+        (args.out_raw, raw_out),
+        (args.out_raw_matched, matched_out),
+    ]:
         path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
 
     n_img_raw, n_img_clean = len(train_recs), len(clean_recs)
     print(f"train images: raw={n_img_raw} clean={n_img_clean} ({n_img_clean / n_img_raw:.1%})")
-    print(f"instructions: raw={len(raw_out)} clean={len(clean_out)}")
-    print(f"-> {args.out_raw}\n-> {args.out_clean}")
+    print(f"instructions: raw={len(raw_out)} clean={len(clean_out)} raw_matched={len(matched_out)}")
+    print(f"-> {args.out_raw}\n-> {args.out_clean}\n-> {args.out_raw_matched}")
 
 
 if __name__ == "__main__":
