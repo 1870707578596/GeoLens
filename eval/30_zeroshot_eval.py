@@ -17,11 +17,12 @@ import torch
 from PIL import Image
 from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
-from importlib.util import spec_from_file_location
+import importlib.util
 _bpath = Path(__file__).resolve().parent.parent / "scripts" / "20_build_instructions.py"
-_spec = spec_from_file_location("builder", _bpath)
-_spec.loader.exec_module(_spec)
-CLASS_ZH = _spec.CLASS_ZH  # {en: (zh, desc)}
+_spec = importlib.util.spec_from_file_location("builder", _bpath)
+_builder = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_builder)
+CLASS_ZH = _builder.CLASS_ZH  # {en: (zh, desc)}
 ZH2EN = {v[0]: k for k, v in CLASS_ZH.items()}
 
 QUESTION = "这张遥感影像中的主要地物是什么？请直接回答地物名称。"
