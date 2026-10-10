@@ -1,0 +1,17 @@
+# 数据流水线 + 评测 + Demo（本地，3060 6G 可跑）
+# 注意：GPU 训练/推理请按显卡代次选择 CUDA 版 torch（如 RTX 5090/Blackwell 需 cu128：
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128）
+torch>=2.5
+torchvision
+open_clip_torch>=3.0
+transformers>=4.49
+peft
+gradio>=6.0
+gradio_client
+pandas
+pyarrow
+pillow
+huggingface_hub
+
+# 训练（服务器，另行安装）：pip install llamafactory
+# 完整服务器初始化见 training/setup_server.sh

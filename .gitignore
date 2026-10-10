@@ -17,4 +17,5 @@ runs/
 # IDE / OS
 .idea/
 .vscode/
+.claude/
 Thumbs.db

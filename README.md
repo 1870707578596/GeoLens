@@ -49,6 +49,8 @@ bash demo/run_demo_server.sh
 python demo/app.py --model <合并模型路径> --load4bit
 ```
 
+数据与模型致谢：[RESISC45](https://www.1-4-5.net/~dmg/practical_bci_proj_data/index.html)（经 [timm/resisc45](https://huggingface.co/datasets/timm/resisc45) 分发，CC BY 4.0）；基座模型 [Qwen2.5-VL-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct)（Apache 2.0）。代码采用 [MIT 许可证](./LICENSE)。
+
 ## 复现
 
 ```bash
