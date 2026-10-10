@@ -7,7 +7,7 @@
 #   - raw：全部训练图（train+validation split），答案取 CLIP top1（含噪声，对照组）
 #   - clean：仅 keep=True 的图（置信度过滤后，实验组）
 #   - 每图随机生成 2-3 条指令：分类 / 二元判断 / 内容描述 / 多标签列举
-#   - 输出 LLaMA-Factory sharegpt 视觉格式：{"messages": [...], "images": [path]}
+#   - 输出 LLaMA-Factory sharegpt 视觉格式：{"conversations": [...], "images": [path]}
 #   - test split 不进入训练数据（留给评测）
 
 import argparse
@@ -91,9 +91,9 @@ def make_examples(rec, rng):
 
     # 1) 分类
     exs.append({
-        "messages": [
-            {"role": "user", "content": "<image>" + rng.choice(Q_CLASS)},
-            {"role": "assistant", "content": f"影像中的主要地物是{zh}。"},
+        "conversations": [
+            {"from": "human", "value": "<image>" + rng.choice(Q_CLASS)},
+            {"from": "gpt", "value": f"影像中的主要地物是{zh}。"},
         ],
         "images": [rec["path"]],
     })
@@ -108,9 +108,9 @@ def make_examples(rec, rng):
             q_cls, ans = neg, f"没有，这张影像中不包含{CLASS_ZH[neg][0]}，主要地物是{zh}。"
         x = CLASS_ZH[q_cls][0]
         exs.append({
-            "messages": [
-                {"role": "user", "content": "<image>" + rng.choice(Q_BINARY).format(x=x)},
-                {"role": "assistant", "content": ans},
+            "conversations": [
+                {"from": "human", "value": "<image>" + rng.choice(Q_BINARY).format(x=x)},
+                {"from": "gpt", "value": ans},
             ],
             "images": [rec["path"]],
         })
@@ -122,9 +122,9 @@ def make_examples(rec, rng):
         if top2[1] > 0.10:
             desc += f"画面中还能辨认出{CLASS_ZH[top2[0]][0]}的特征。"
         exs.append({
-            "messages": [
-                {"role": "user", "content": "<image>" + rng.choice(Q_DESC)},
-                {"role": "assistant", "content": desc},
+            "conversations": [
+                {"from": "human", "value": "<image>" + rng.choice(Q_DESC)},
+                {"from": "gpt", "value": desc},
             ],
             "images": [rec["path"]],
         })
@@ -134,9 +134,9 @@ def make_examples(rec, rng):
         cands = [c for c, p in rec["top5"][:3] if p >= 0.02]
         names = "、".join(CLASS_ZH[c][0] for c in cands)
         exs.append({
-            "messages": [
-                {"role": "user", "content": "<image>" + rng.choice(Q_MULTI)},
-                {"role": "assistant", "content": f"影像中可能包含：{names}。其中最主要的是{zh}。"},
+            "conversations": [
+                {"from": "human", "value": "<image>" + rng.choice(Q_MULTI)},
+                {"from": "gpt", "value": f"影像中可能包含：{names}。其中最主要的是{zh}。"},
             ],
             "images": [rec["path"]],
         })

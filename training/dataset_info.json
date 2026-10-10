@@ -3,7 +3,7 @@
     "file_name": "../data/instructions_clean.json",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "messages",
+      "messages": "conversations",
       "images": "images"
     }
   },
@@ -11,7 +11,7 @@
     "file_name": "../data/instructions_raw_matched.json",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "messages",
+      "messages": "conversations",
       "images": "images"
     }
   },
@@ -19,7 +19,7 @@
     "file_name": "../data/instructions_raw.json",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "messages",
+      "messages": "conversations",
       "images": "images"
     }
   }
