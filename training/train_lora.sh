@@ -22,7 +22,7 @@ llamafactory-cli train \
   --do_train \
   --dataset geolens_${VARIANT} \
   --dataset_dir training \
-  --template qwen2_5_vl \
+  --template qwen2_vl \
   --finetuning_type lora \
   --lora_target all \
   --lora_rank 16 \

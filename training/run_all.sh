@@ -14,7 +14,11 @@ python -c "import torch; assert torch.cuda.is_available(), 'CUDA unavailable'; p
 test -f data/instructions_clean.json || { echo "data missing"; exit 1; }
 
 echo "=== [1/4] zero-shot 基线 ==="
-python eval/30_zeroshot_eval.py --n 450 --out eval/results_zeroshot.json --tag zeroshot
+if [ ! -f eval/results_zeroshot.json ]; then
+  python eval/30_zeroshot_eval.py --n 450 --out eval/results_zeroshot.json --tag zeroshot
+else
+  echo "skip: eval/results_zeroshot.json 已存在（如需重跑请删除该文件）"
+fi
 
 echo "=== [2/4] LoRA 微调 x3 ==="
 for v in clean raw_matched raw_full; do
