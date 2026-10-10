@@ -24,6 +24,13 @@ _builder = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_builder)
 CLASS_ZH = _builder.CLASS_ZH  # {en: (zh, desc)}
 ZH2EN = {v[0]: k for k, v in CLASS_ZH.items()}
+# 常见同义词归一（模型回答里的说法 → 标准类名）；有歧义的（如"农田""住宅区"）不映射
+SYNONYMS = {
+    "飞机场": "机场", "高速路": "高速公路", "铁轨": "铁路", "码头": "港口",
+    "桥": "桥梁", "山地": "山脉", "云层": "云", "灌木": "灌木丛", "沙滩": "海滩",
+    "轮船": "船舶", "船只": "船舶", "储罐": "储油罐", "油罐": "储油罐",
+    "发电厂": "火力发电站", "电厂": "火力发电站", "跑道": "飞机跑道",
+}
 
 QUESTION = "这张遥感影像中的主要地物是什么？请直接回答地物名称。"
 
@@ -78,7 +85,14 @@ def main():
         answer = processor.decode(out[0][inputs.input_ids.shape[1]:], skip_special_tokens=True)
 
         hits = re.findall(zh_pattern, answer)
-        pred = ZH2EN[hits[0]] if hits else None
+        if hits:
+            pred = ZH2EN[hits[0]]
+        else:
+            pred = None
+            for s in sorted(SYNONYMS, key=len, reverse=True):
+                if s in answer:
+                    pred = ZH2EN[SYNONYMS[s]]
+                    break
         if pred is None:
             unparsed += 1
         correct += pred == gt

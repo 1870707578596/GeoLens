@@ -3,6 +3,7 @@
 # 前置：setup.sh 已完成（SETUP_DONE）、数据已解压到 ~/xiaopeng/geolens/GeoLens
 # 用法: nohup bash training/run_all.sh > ~/xiaopeng/logs/run_all.log 2>&1 &
 set -e
+set -o pipefail
 source ~/xiaopeng/env.sh
 source ~/xiaopeng/miniconda3/etc/profile.d/conda.sh
 conda activate geolens
