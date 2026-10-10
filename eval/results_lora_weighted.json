@@ -1,0 +1,2712 @@
+{
+ "summary": {
+  "tag": "lora_weighted",
+  "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "adapter": "outputs/lora_weighted",
+  "n": 450,
+  "accuracy": 0.62,
+  "unparsed_rate": 0.0
+ },
+ "records": [
+  {
+   "image": "data/images/test/airplane/airplane_209.jpg",
+   "gt": "airplane",
+   "pred": "airplane",
+   "answer": "飞机"
+  },
+  {
+   "image": "data/images/test/airplane/airplane_448.jpg",
+   "gt": "airplane",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airplane/airplane_504.jpg",
+   "gt": "airplane",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airplane/airplane_308.jpg",
+   "gt": "airplane",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airplane/airplane_061.jpg",
+   "gt": "airplane",
+   "pred": "airplane",
+   "answer": "飞机"
+  },
+  {
+   "image": "data/images/test/airplane/airplane_108.jpg",
+   "gt": "airplane",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airplane/airplane_679.jpg",
+   "gt": "airplane",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airplane/airplane_132.jpg",
+   "gt": "airplane",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airplane/airplane_137.jpg",
+   "gt": "airplane",
+   "pred": "airplane",
+   "answer": "飞机"
+  },
+  {
+   "image": "data/images/test/airplane/airplane_447.jpg",
+   "gt": "airplane",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airport/airport_488.jpg",
+   "gt": "airport",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airport/airport_531.jpg",
+   "gt": "airport",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airport/airport_294.jpg",
+   "gt": "airport",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airport/airport_328.jpg",
+   "gt": "airport",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airport/airport_640.jpg",
+   "gt": "airport",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airport/airport_100.jpg",
+   "gt": "airport",
+   "pred": "palace",
+   "answer": "宫殿"
+  },
+  {
+   "image": "data/images/test/airport/airport_123.jpg",
+   "gt": "airport",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airport/airport_496.jpg",
+   "gt": "airport",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airport/airport_614.jpg",
+   "gt": "airport",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/airport/airport_066.jpg",
+   "gt": "airport",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/baseball_diamond/baseball_diamond_555.jpg",
+   "gt": "baseball_diamond",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/baseball_diamond/baseball_diamond_362.jpg",
+   "gt": "baseball_diamond",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/baseball_diamond/baseball_diamond_462.jpg",
+   "gt": "baseball_diamond",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/baseball_diamond/baseball_diamond_488.jpg",
+   "gt": "baseball_diamond",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/baseball_diamond/baseball_diamond_290.jpg",
+   "gt": "baseball_diamond",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/baseball_diamond/baseball_diamond_240.jpg",
+   "gt": "baseball_diamond",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/baseball_diamond/baseball_diamond_314.jpg",
+   "gt": "baseball_diamond",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/baseball_diamond/baseball_diamond_370.jpg",
+   "gt": "baseball_diamond",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/baseball_diamond/baseball_diamond_121.jpg",
+   "gt": "baseball_diamond",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/baseball_diamond/baseball_diamond_690.jpg",
+   "gt": "baseball_diamond",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/basketball_court/basketball_court_133.jpg",
+   "gt": "basketball_court",
+   "pred": "basketball_court",
+   "answer": "篮球场"
+  },
+  {
+   "image": "data/images/test/basketball_court/basketball_court_616.jpg",
+   "gt": "basketball_court",
+   "pred": "basketball_court",
+   "answer": "篮球场"
+  },
+  {
+   "image": "data/images/test/basketball_court/basketball_court_225.jpg",
+   "gt": "basketball_court",
+   "pred": "basketball_court",
+   "answer": "篮球场"
+  },
+  {
+   "image": "data/images/test/basketball_court/basketball_court_482.jpg",
+   "gt": "basketball_court",
+   "pred": "basketball_court",
+   "answer": "篮球场"
+  },
+  {
+   "image": "data/images/test/basketball_court/basketball_court_472.jpg",
+   "gt": "basketball_court",
+   "pred": "basketball_court",
+   "answer": "篮球场"
+  },
+  {
+   "image": "data/images/test/basketball_court/basketball_court_475.jpg",
+   "gt": "basketball_court",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/basketball_court/basketball_court_317.jpg",
+   "gt": "basketball_court",
+   "pred": "basketball_court",
+   "answer": "篮球场"
+  },
+  {
+   "image": "data/images/test/basketball_court/basketball_court_528.jpg",
+   "gt": "basketball_court",
+   "pred": "basketball_court",
+   "answer": "篮球场"
+  },
+  {
+   "image": "data/images/test/basketball_court/basketball_court_012.jpg",
+   "gt": "basketball_court",
+   "pred": "basketball_court",
+   "answer": "篮球场"
+  },
+  {
+   "image": "data/images/test/basketball_court/basketball_court_662.jpg",
+   "gt": "basketball_court",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/beach/beach_656.jpg",
+   "gt": "beach",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/beach/beach_530.jpg",
+   "gt": "beach",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/beach/beach_066.jpg",
+   "gt": "beach",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/beach/beach_583.jpg",
+   "gt": "beach",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/beach/beach_505.jpg",
+   "gt": "beach",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/beach/beach_456.jpg",
+   "gt": "beach",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/beach/beach_398.jpg",
+   "gt": "beach",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/beach/beach_486.jpg",
+   "gt": "beach",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/beach/beach_644.jpg",
+   "gt": "beach",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/beach/beach_094.jpg",
+   "gt": "beach",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/bridge/bridge_533.jpg",
+   "gt": "bridge",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/bridge/bridge_029.jpg",
+   "gt": "bridge",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/bridge/bridge_421.jpg",
+   "gt": "bridge",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/bridge/bridge_243.jpg",
+   "gt": "bridge",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/bridge/bridge_569.jpg",
+   "gt": "bridge",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/bridge/bridge_391.jpg",
+   "gt": "bridge",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/bridge/bridge_182.jpg",
+   "gt": "bridge",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/bridge/bridge_490.jpg",
+   "gt": "bridge",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/bridge/bridge_332.jpg",
+   "gt": "bridge",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/bridge/bridge_007.jpg",
+   "gt": "bridge",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/chaparral/chaparral_072.jpg",
+   "gt": "chaparral",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/chaparral/chaparral_536.jpg",
+   "gt": "chaparral",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/chaparral/chaparral_201.jpg",
+   "gt": "chaparral",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/chaparral/chaparral_361.jpg",
+   "gt": "chaparral",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/chaparral/chaparral_498.jpg",
+   "gt": "chaparral",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/chaparral/chaparral_557.jpg",
+   "gt": "chaparral",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/chaparral/chaparral_350.jpg",
+   "gt": "chaparral",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/chaparral/chaparral_342.jpg",
+   "gt": "chaparral",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/chaparral/chaparral_598.jpg",
+   "gt": "chaparral",
+   "pred": "ground_track_field",
+   "answer": "田径场"
+  },
+  {
+   "image": "data/images/test/chaparral/chaparral_649.jpg",
+   "gt": "chaparral",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/church/church_490.jpg",
+   "gt": "church",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/church/church_644.jpg",
+   "gt": "church",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/church/church_377.jpg",
+   "gt": "church",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/church/church_502.jpg",
+   "gt": "church",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/church/church_660.jpg",
+   "gt": "church",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/church/church_547.jpg",
+   "gt": "church",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/church/church_406.jpg",
+   "gt": "church",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/church/church_154.jpg",
+   "gt": "church",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/church/church_475.jpg",
+   "gt": "church",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/church/church_044.jpg",
+   "gt": "church",
+   "pred": "palace",
+   "answer": "宫殿"
+  },
+  {
+   "image": "data/images/test/circular_farmland/circular_farmland_183.jpg",
+   "gt": "circular_farmland",
+   "pred": "circular_farmland",
+   "answer": "环形农田"
+  },
+  {
+   "image": "data/images/test/circular_farmland/circular_farmland_088.jpg",
+   "gt": "circular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/circular_farmland/circular_farmland_559.jpg",
+   "gt": "circular_farmland",
+   "pred": "circular_farmland",
+   "answer": "环形农田"
+  },
+  {
+   "image": "data/images/test/circular_farmland/circular_farmland_555.jpg",
+   "gt": "circular_farmland",
+   "pred": "circular_farmland",
+   "answer": "环形农田"
+  },
+  {
+   "image": "data/images/test/circular_farmland/circular_farmland_186.jpg",
+   "gt": "circular_farmland",
+   "pred": "circular_farmland",
+   "answer": "环形农田"
+  },
+  {
+   "image": "data/images/test/circular_farmland/circular_farmland_374.jpg",
+   "gt": "circular_farmland",
+   "pred": "wetland",
+   "answer": "湿地"
+  },
+  {
+   "image": "data/images/test/circular_farmland/circular_farmland_666.jpg",
+   "gt": "circular_farmland",
+   "pred": "circular_farmland",
+   "answer": "环形农田"
+  },
+  {
+   "image": "data/images/test/circular_farmland/circular_farmland_121.jpg",
+   "gt": "circular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/circular_farmland/circular_farmland_090.jpg",
+   "gt": "circular_farmland",
+   "pred": "circular_farmland",
+   "answer": "环形农田"
+  },
+  {
+   "image": "data/images/test/circular_farmland/circular_farmland_084.jpg",
+   "gt": "circular_farmland",
+   "pred": "circular_farmland",
+   "answer": "环形农田"
+  },
+  {
+   "image": "data/images/test/cloud/cloud_231.jpg",
+   "gt": "cloud",
+   "pred": "cloud",
+   "answer": "云"
+  },
+  {
+   "image": "data/images/test/cloud/cloud_439.jpg",
+   "gt": "cloud",
+   "pred": "cloud",
+   "answer": "云"
+  },
+  {
+   "image": "data/images/test/cloud/cloud_061.jpg",
+   "gt": "cloud",
+   "pred": "cloud",
+   "answer": "云"
+  },
+  {
+   "image": "data/images/test/cloud/cloud_284.jpg",
+   "gt": "cloud",
+   "pred": "cloud",
+   "answer": "云"
+  },
+  {
+   "image": "data/images/test/cloud/cloud_469.jpg",
+   "gt": "cloud",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/cloud/cloud_258.jpg",
+   "gt": "cloud",
+   "pred": "cloud",
+   "answer": "云"
+  },
+  {
+   "image": "data/images/test/cloud/cloud_228.jpg",
+   "gt": "cloud",
+   "pred": "cloud",
+   "answer": "云"
+  },
+  {
+   "image": "data/images/test/cloud/cloud_491.jpg",
+   "gt": "cloud",
+   "pred": "cloud",
+   "answer": "云"
+  },
+  {
+   "image": "data/images/test/cloud/cloud_576.jpg",
+   "gt": "cloud",
+   "pred": "cloud",
+   "answer": "云"
+  },
+  {
+   "image": "data/images/test/cloud/cloud_290.jpg",
+   "gt": "cloud",
+   "pred": "cloud",
+   "answer": "云"
+  },
+  {
+   "image": "data/images/test/commercial_area/commercial_area_614.jpg",
+   "gt": "commercial_area",
+   "pred": "palace",
+   "answer": "宫殿"
+  },
+  {
+   "image": "data/images/test/commercial_area/commercial_area_210.jpg",
+   "gt": "commercial_area",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/commercial_area/commercial_area_193.jpg",
+   "gt": "commercial_area",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/commercial_area/commercial_area_518.jpg",
+   "gt": "commercial_area",
+   "pred": "palace",
+   "answer": "宫殿"
+  },
+  {
+   "image": "data/images/test/commercial_area/commercial_area_560.jpg",
+   "gt": "commercial_area",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/commercial_area/commercial_area_665.jpg",
+   "gt": "commercial_area",
+   "pred": "palace",
+   "answer": "宫殿"
+  },
+  {
+   "image": "data/images/test/commercial_area/commercial_area_313.jpg",
+   "gt": "commercial_area",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/commercial_area/commercial_area_265.jpg",
+   "gt": "commercial_area",
+   "pred": "dense_residential",
+   "answer": "高密度住宅区"
+  },
+  {
+   "image": "data/images/test/commercial_area/commercial_area_186.jpg",
+   "gt": "commercial_area",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/commercial_area/commercial_area_489.jpg",
+   "gt": "commercial_area",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/dense_residential/dense_residential_021.jpg",
+   "gt": "dense_residential",
+   "pred": "dense_residential",
+   "answer": "高密度住宅区"
+  },
+  {
+   "image": "data/images/test/dense_residential/dense_residential_093.jpg",
+   "gt": "dense_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/dense_residential/dense_residential_124.jpg",
+   "gt": "dense_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/dense_residential/dense_residential_142.jpg",
+   "gt": "dense_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/dense_residential/dense_residential_397.jpg",
+   "gt": "dense_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/dense_residential/dense_residential_610.jpg",
+   "gt": "dense_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/dense_residential/dense_residential_373.jpg",
+   "gt": "dense_residential",
+   "pred": "dense_residential",
+   "answer": "高密度住宅区"
+  },
+  {
+   "image": "data/images/test/dense_residential/dense_residential_515.jpg",
+   "gt": "dense_residential",
+   "pred": "medium_residential",
+   "answer": "中密度住宅区"
+  },
+  {
+   "image": "data/images/test/dense_residential/dense_residential_168.jpg",
+   "gt": "dense_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/dense_residential/dense_residential_002.jpg",
+   "gt": "dense_residential",
+   "pred": "dense_residential",
+   "answer": "高密度住宅区"
+  },
+  {
+   "image": "data/images/test/desert/desert_555.jpg",
+   "gt": "desert",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/desert/desert_550.jpg",
+   "gt": "desert",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/desert/desert_246.jpg",
+   "gt": "desert",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/desert/desert_290.jpg",
+   "gt": "desert",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/desert/desert_064.jpg",
+   "gt": "desert",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/desert/desert_464.jpg",
+   "gt": "desert",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/desert/desert_003.jpg",
+   "gt": "desert",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/desert/desert_341.jpg",
+   "gt": "desert",
+   "pred": "desert",
+   "answer": "沙漠"
+  },
+  {
+   "image": "data/images/test/desert/desert_139.jpg",
+   "gt": "desert",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/desert/desert_061.jpg",
+   "gt": "desert",
+   "pred": "beach",
+   "answer": "海滩"
+  },
+  {
+   "image": "data/images/test/forest/forest_128.jpg",
+   "gt": "forest",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/forest/forest_570.jpg",
+   "gt": "forest",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/forest/forest_316.jpg",
+   "gt": "forest",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/forest/forest_261.jpg",
+   "gt": "forest",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/forest/forest_510.jpg",
+   "gt": "forest",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/forest/forest_039.jpg",
+   "gt": "forest",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/forest/forest_429.jpg",
+   "gt": "forest",
+   "pred": "wetland",
+   "answer": "湿地"
+  },
+  {
+   "image": "data/images/test/forest/forest_019.jpg",
+   "gt": "forest",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/forest/forest_042.jpg",
+   "gt": "forest",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/forest/forest_338.jpg",
+   "gt": "forest",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/freeway/freeway_006.jpg",
+   "gt": "freeway",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/freeway/freeway_542.jpg",
+   "gt": "freeway",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/freeway/freeway_428.jpg",
+   "gt": "freeway",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/freeway/freeway_469.jpg",
+   "gt": "freeway",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/freeway/freeway_634.jpg",
+   "gt": "freeway",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/freeway/freeway_151.jpg",
+   "gt": "freeway",
+   "pred": "freeway",
+   "answer": "高速公路"
+  },
+  {
+   "image": "data/images/test/freeway/freeway_603.jpg",
+   "gt": "freeway",
+   "pred": "freeway",
+   "answer": "高速公路"
+  },
+  {
+   "image": "data/images/test/freeway/freeway_266.jpg",
+   "gt": "freeway",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/freeway/freeway_298.jpg",
+   "gt": "freeway",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/freeway/freeway_453.jpg",
+   "gt": "freeway",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/golf_course/golf_course_495.jpg",
+   "gt": "golf_course",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/golf_course/golf_course_122.jpg",
+   "gt": "golf_course",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/golf_course/golf_course_471.jpg",
+   "gt": "golf_course",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/golf_course/golf_course_323.jpg",
+   "gt": "golf_course",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/golf_course/golf_course_412.jpg",
+   "gt": "golf_course",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/golf_course/golf_course_633.jpg",
+   "gt": "golf_course",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/golf_course/golf_course_589.jpg",
+   "gt": "golf_course",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/golf_course/golf_course_679.jpg",
+   "gt": "golf_course",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/golf_course/golf_course_405.jpg",
+   "gt": "golf_course",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/golf_course/golf_course_029.jpg",
+   "gt": "golf_course",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/ground_track_field/ground_track_field_033.jpg",
+   "gt": "ground_track_field",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/ground_track_field/ground_track_field_653.jpg",
+   "gt": "ground_track_field",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/ground_track_field/ground_track_field_421.jpg",
+   "gt": "ground_track_field",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/ground_track_field/ground_track_field_234.jpg",
+   "gt": "ground_track_field",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/ground_track_field/ground_track_field_659.jpg",
+   "gt": "ground_track_field",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/ground_track_field/ground_track_field_656.jpg",
+   "gt": "ground_track_field",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/ground_track_field/ground_track_field_408.jpg",
+   "gt": "ground_track_field",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/ground_track_field/ground_track_field_438.jpg",
+   "gt": "ground_track_field",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/ground_track_field/ground_track_field_367.jpg",
+   "gt": "ground_track_field",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/ground_track_field/ground_track_field_385.jpg",
+   "gt": "ground_track_field",
+   "pred": "ground_track_field",
+   "answer": "田径场"
+  },
+  {
+   "image": "data/images/test/harbor/harbor_533.jpg",
+   "gt": "harbor",
+   "pred": "harbor",
+   "answer": "港口"
+  },
+  {
+   "image": "data/images/test/harbor/harbor_469.jpg",
+   "gt": "harbor",
+   "pred": "harbor",
+   "answer": "港口"
+  },
+  {
+   "image": "data/images/test/harbor/harbor_625.jpg",
+   "gt": "harbor",
+   "pred": "harbor",
+   "answer": "港口"
+  },
+  {
+   "image": "data/images/test/harbor/harbor_071.jpg",
+   "gt": "harbor",
+   "pred": "harbor",
+   "answer": "港口"
+  },
+  {
+   "image": "data/images/test/harbor/harbor_027.jpg",
+   "gt": "harbor",
+   "pred": "harbor",
+   "answer": "港口"
+  },
+  {
+   "image": "data/images/test/harbor/harbor_642.jpg",
+   "gt": "harbor",
+   "pred": "harbor",
+   "answer": "港口"
+  },
+  {
+   "image": "data/images/test/harbor/harbor_265.jpg",
+   "gt": "harbor",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/harbor/harbor_327.jpg",
+   "gt": "harbor",
+   "pred": "harbor",
+   "answer": "港口"
+  },
+  {
+   "image": "data/images/test/harbor/harbor_169.jpg",
+   "gt": "harbor",
+   "pred": "harbor",
+   "answer": "港口"
+  },
+  {
+   "image": "data/images/test/harbor/harbor_478.jpg",
+   "gt": "harbor",
+   "pred": "harbor",
+   "answer": "港口"
+  },
+  {
+   "image": "data/images/test/industrial_area/industrial_area_080.jpg",
+   "gt": "industrial_area",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/industrial_area/industrial_area_442.jpg",
+   "gt": "industrial_area",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/industrial_area/industrial_area_368.jpg",
+   "gt": "industrial_area",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/industrial_area/industrial_area_453.jpg",
+   "gt": "industrial_area",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/industrial_area/industrial_area_132.jpg",
+   "gt": "industrial_area",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/industrial_area/industrial_area_047.jpg",
+   "gt": "industrial_area",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/industrial_area/industrial_area_348.jpg",
+   "gt": "industrial_area",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/industrial_area/industrial_area_423.jpg",
+   "gt": "industrial_area",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/industrial_area/industrial_area_347.jpg",
+   "gt": "industrial_area",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/industrial_area/industrial_area_189.jpg",
+   "gt": "industrial_area",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/intersection/intersection_658.jpg",
+   "gt": "intersection",
+   "pred": "intersection",
+   "answer": "十字路口"
+  },
+  {
+   "image": "data/images/test/intersection/intersection_055.jpg",
+   "gt": "intersection",
+   "pred": "intersection",
+   "answer": "十字路口"
+  },
+  {
+   "image": "data/images/test/intersection/intersection_380.jpg",
+   "gt": "intersection",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/intersection/intersection_224.jpg",
+   "gt": "intersection",
+   "pred": "intersection",
+   "answer": "十字路口"
+  },
+  {
+   "image": "data/images/test/intersection/intersection_099.jpg",
+   "gt": "intersection",
+   "pred": "intersection",
+   "answer": "十字路口"
+  },
+  {
+   "image": "data/images/test/intersection/intersection_195.jpg",
+   "gt": "intersection",
+   "pred": "intersection",
+   "answer": "十字路口"
+  },
+  {
+   "image": "data/images/test/intersection/intersection_256.jpg",
+   "gt": "intersection",
+   "pred": "intersection",
+   "answer": "十字路口"
+  },
+  {
+   "image": "data/images/test/intersection/intersection_160.jpg",
+   "gt": "intersection",
+   "pred": "intersection",
+   "answer": "十字路口"
+  },
+  {
+   "image": "data/images/test/intersection/intersection_287.jpg",
+   "gt": "intersection",
+   "pred": "intersection",
+   "answer": "十字路口"
+  },
+  {
+   "image": "data/images/test/intersection/intersection_004.jpg",
+   "gt": "intersection",
+   "pred": "intersection",
+   "answer": "十字路口"
+  },
+  {
+   "image": "data/images/test/island/island_630.jpg",
+   "gt": "island",
+   "pred": "island",
+   "answer": "岛屿"
+  },
+  {
+   "image": "data/images/test/island/island_537.jpg",
+   "gt": "island",
+   "pred": "island",
+   "answer": "岛屿"
+  },
+  {
+   "image": "data/images/test/island/island_670.jpg",
+   "gt": "island",
+   "pred": "island",
+   "answer": "岛屿"
+  },
+  {
+   "image": "data/images/test/island/island_433.jpg",
+   "gt": "island",
+   "pred": "island",
+   "answer": "岛屿"
+  },
+  {
+   "image": "data/images/test/island/island_044.jpg",
+   "gt": "island",
+   "pred": "island",
+   "answer": "岛屿"
+  },
+  {
+   "image": "data/images/test/island/island_520.jpg",
+   "gt": "island",
+   "pred": "island",
+   "answer": "岛屿"
+  },
+  {
+   "image": "data/images/test/island/island_240.jpg",
+   "gt": "island",
+   "pred": "island",
+   "answer": "岛屿"
+  },
+  {
+   "image": "data/images/test/island/island_481.jpg",
+   "gt": "island",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/island/island_572.jpg",
+   "gt": "island",
+   "pred": "island",
+   "answer": "岛屿"
+  },
+  {
+   "image": "data/images/test/island/island_652.jpg",
+   "gt": "island",
+   "pred": "island",
+   "answer": "岛屿"
+  },
+  {
+   "image": "data/images/test/lake/lake_397.jpg",
+   "gt": "lake",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/lake/lake_636.jpg",
+   "gt": "lake",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/lake/lake_157.jpg",
+   "gt": "lake",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/lake/lake_553.jpg",
+   "gt": "lake",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/lake/lake_158.jpg",
+   "gt": "lake",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/lake/lake_174.jpg",
+   "gt": "lake",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/lake/lake_061.jpg",
+   "gt": "lake",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/lake/lake_465.jpg",
+   "gt": "lake",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/lake/lake_665.jpg",
+   "gt": "lake",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/lake/lake_332.jpg",
+   "gt": "lake",
+   "pred": "sea_ice",
+   "answer": "海冰"
+  },
+  {
+   "image": "data/images/test/meadow/meadow_612.jpg",
+   "gt": "meadow",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/meadow/meadow_486.jpg",
+   "gt": "meadow",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/meadow/meadow_679.jpg",
+   "gt": "meadow",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/meadow/meadow_376.jpg",
+   "gt": "meadow",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/meadow/meadow_663.jpg",
+   "gt": "meadow",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/meadow/meadow_146.jpg",
+   "gt": "meadow",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/meadow/meadow_163.jpg",
+   "gt": "meadow",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/meadow/meadow_151.jpg",
+   "gt": "meadow",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/meadow/meadow_609.jpg",
+   "gt": "meadow",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/meadow/meadow_566.jpg",
+   "gt": "meadow",
+   "pred": "forest",
+   "answer": "森林"
+  },
+  {
+   "image": "data/images/test/medium_residential/medium_residential_533.jpg",
+   "gt": "medium_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/medium_residential/medium_residential_032.jpg",
+   "gt": "medium_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/medium_residential/medium_residential_428.jpg",
+   "gt": "medium_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/medium_residential/medium_residential_155.jpg",
+   "gt": "medium_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/medium_residential/medium_residential_192.jpg",
+   "gt": "medium_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/medium_residential/medium_residential_576.jpg",
+   "gt": "medium_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/medium_residential/medium_residential_298.jpg",
+   "gt": "medium_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/medium_residential/medium_residential_368.jpg",
+   "gt": "medium_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/medium_residential/medium_residential_214.jpg",
+   "gt": "medium_residential",
+   "pred": "intersection",
+   "answer": "十字路口"
+  },
+  {
+   "image": "data/images/test/medium_residential/medium_residential_039.jpg",
+   "gt": "medium_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/mobile_home_park/mobile_home_park_089.jpg",
+   "gt": "mobile_home_park",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/mobile_home_park/mobile_home_park_129.jpg",
+   "gt": "mobile_home_park",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/mobile_home_park/mobile_home_park_136.jpg",
+   "gt": "mobile_home_park",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/mobile_home_park/mobile_home_park_264.jpg",
+   "gt": "mobile_home_park",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/mobile_home_park/mobile_home_park_090.jpg",
+   "gt": "mobile_home_park",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/mobile_home_park/mobile_home_park_527.jpg",
+   "gt": "mobile_home_park",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/mobile_home_park/mobile_home_park_208.jpg",
+   "gt": "mobile_home_park",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/mobile_home_park/mobile_home_park_120.jpg",
+   "gt": "mobile_home_park",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/mobile_home_park/mobile_home_park_354.jpg",
+   "gt": "mobile_home_park",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/mobile_home_park/mobile_home_park_559.jpg",
+   "gt": "mobile_home_park",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/mountain/mountain_631.jpg",
+   "gt": "mountain",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/mountain/mountain_608.jpg",
+   "gt": "mountain",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/mountain/mountain_069.jpg",
+   "gt": "mountain",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/mountain/mountain_326.jpg",
+   "gt": "mountain",
+   "pred": "river",
+   "answer": "河流"
+  },
+  {
+   "image": "data/images/test/mountain/mountain_443.jpg",
+   "gt": "mountain",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/mountain/mountain_217.jpg",
+   "gt": "mountain",
+   "pred": "ground_track_field",
+   "answer": "田径场"
+  },
+  {
+   "image": "data/images/test/mountain/mountain_642.jpg",
+   "gt": "mountain",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/mountain/mountain_108.jpg",
+   "gt": "mountain",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/mountain/mountain_100.jpg",
+   "gt": "mountain",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/mountain/mountain_327.jpg",
+   "gt": "mountain",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/overpass/overpass_566.jpg",
+   "gt": "overpass",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/overpass/overpass_182.jpg",
+   "gt": "overpass",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/overpass/overpass_366.jpg",
+   "gt": "overpass",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/overpass/overpass_598.jpg",
+   "gt": "overpass",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/overpass/overpass_582.jpg",
+   "gt": "overpass",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/overpass/overpass_553.jpg",
+   "gt": "overpass",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/overpass/overpass_423.jpg",
+   "gt": "overpass",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/overpass/overpass_175.jpg",
+   "gt": "overpass",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/overpass/overpass_189.jpg",
+   "gt": "overpass",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/overpass/overpass_670.jpg",
+   "gt": "overpass",
+   "pred": "overpass",
+   "answer": "立交桥"
+  },
+  {
+   "image": "data/images/test/palace/palace_168.jpg",
+   "gt": "palace",
+   "pred": "palace",
+   "answer": "宫殿"
+  },
+  {
+   "image": "data/images/test/palace/palace_345.jpg",
+   "gt": "palace",
+   "pred": "palace",
+   "answer": "宫殿"
+  },
+  {
+   "image": "data/images/test/palace/palace_127.jpg",
+   "gt": "palace",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/palace/palace_407.jpg",
+   "gt": "palace",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/palace/palace_158.jpg",
+   "gt": "palace",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/palace/palace_254.jpg",
+   "gt": "palace",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/palace/palace_216.jpg",
+   "gt": "palace",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/palace/palace_124.jpg",
+   "gt": "palace",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/palace/palace_557.jpg",
+   "gt": "palace",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/palace/palace_145.jpg",
+   "gt": "palace",
+   "pred": "palace",
+   "answer": "宫殿"
+  },
+  {
+   "image": "data/images/test/parking_lot/parking_lot_385.jpg",
+   "gt": "parking_lot",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/parking_lot/parking_lot_366.jpg",
+   "gt": "parking_lot",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/parking_lot/parking_lot_166.jpg",
+   "gt": "parking_lot",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/parking_lot/parking_lot_140.jpg",
+   "gt": "parking_lot",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/parking_lot/parking_lot_494.jpg",
+   "gt": "parking_lot",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/parking_lot/parking_lot_587.jpg",
+   "gt": "parking_lot",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/parking_lot/parking_lot_049.jpg",
+   "gt": "parking_lot",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/parking_lot/parking_lot_219.jpg",
+   "gt": "parking_lot",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/parking_lot/parking_lot_276.jpg",
+   "gt": "parking_lot",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/parking_lot/parking_lot_008.jpg",
+   "gt": "parking_lot",
+   "pred": "parking_lot",
+   "answer": "停车场"
+  },
+  {
+   "image": "data/images/test/railway/railway_492.jpg",
+   "gt": "railway",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway/railway_371.jpg",
+   "gt": "railway",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway/railway_259.jpg",
+   "gt": "railway",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway/railway_325.jpg",
+   "gt": "railway",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway/railway_687.jpg",
+   "gt": "railway",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway/railway_199.jpg",
+   "gt": "railway",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway/railway_171.jpg",
+   "gt": "railway",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway/railway_570.jpg",
+   "gt": "railway",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway/railway_387.jpg",
+   "gt": "railway",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway/railway_054.jpg",
+   "gt": "railway",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway_station/railway_station_184.jpg",
+   "gt": "railway_station",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway_station/railway_station_286.jpg",
+   "gt": "railway_station",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway_station/railway_station_621.jpg",
+   "gt": "railway_station",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway_station/railway_station_060.jpg",
+   "gt": "railway_station",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway_station/railway_station_011.jpg",
+   "gt": "railway_station",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway_station/railway_station_227.jpg",
+   "gt": "railway_station",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway_station/railway_station_192.jpg",
+   "gt": "railway_station",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway_station/railway_station_136.jpg",
+   "gt": "railway_station",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway_station/railway_station_040.jpg",
+   "gt": "railway_station",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/railway_station/railway_station_306.jpg",
+   "gt": "railway_station",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/rectangular_farmland/rectangular_farmland_659.jpg",
+   "gt": "rectangular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/rectangular_farmland/rectangular_farmland_152.jpg",
+   "gt": "rectangular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/rectangular_farmland/rectangular_farmland_241.jpg",
+   "gt": "rectangular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/rectangular_farmland/rectangular_farmland_292.jpg",
+   "gt": "rectangular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/rectangular_farmland/rectangular_farmland_337.jpg",
+   "gt": "rectangular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/rectangular_farmland/rectangular_farmland_223.jpg",
+   "gt": "rectangular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/rectangular_farmland/rectangular_farmland_280.jpg",
+   "gt": "rectangular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/rectangular_farmland/rectangular_farmland_528.jpg",
+   "gt": "rectangular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/rectangular_farmland/rectangular_farmland_529.jpg",
+   "gt": "rectangular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/rectangular_farmland/rectangular_farmland_640.jpg",
+   "gt": "rectangular_farmland",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/river/river_389.jpg",
+   "gt": "river",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/river/river_576.jpg",
+   "gt": "river",
+   "pred": "river",
+   "answer": "河流"
+  },
+  {
+   "image": "data/images/test/river/river_536.jpg",
+   "gt": "river",
+   "pred": "river",
+   "answer": "河流"
+  },
+  {
+   "image": "data/images/test/river/river_450.jpg",
+   "gt": "river",
+   "pred": "river",
+   "answer": "河流"
+  },
+  {
+   "image": "data/images/test/river/river_148.jpg",
+   "gt": "river",
+   "pred": "river",
+   "answer": "河流"
+  },
+  {
+   "image": "data/images/test/river/river_145.jpg",
+   "gt": "river",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/river/river_186.jpg",
+   "gt": "river",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/river/river_173.jpg",
+   "gt": "river",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/river/river_440.jpg",
+   "gt": "river",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/river/river_638.jpg",
+   "gt": "river",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/roundabout/roundabout_005.jpg",
+   "gt": "roundabout",
+   "pred": "roundabout",
+   "answer": "环岛"
+  },
+  {
+   "image": "data/images/test/roundabout/roundabout_180.jpg",
+   "gt": "roundabout",
+   "pred": "roundabout",
+   "answer": "环岛"
+  },
+  {
+   "image": "data/images/test/roundabout/roundabout_208.jpg",
+   "gt": "roundabout",
+   "pred": "roundabout",
+   "answer": "环岛"
+  },
+  {
+   "image": "data/images/test/roundabout/roundabout_118.jpg",
+   "gt": "roundabout",
+   "pred": "roundabout",
+   "answer": "环岛"
+  },
+  {
+   "image": "data/images/test/roundabout/roundabout_413.jpg",
+   "gt": "roundabout",
+   "pred": "intersection",
+   "answer": "十字路口"
+  },
+  {
+   "image": "data/images/test/roundabout/roundabout_620.jpg",
+   "gt": "roundabout",
+   "pred": "roundabout",
+   "answer": "环岛"
+  },
+  {
+   "image": "data/images/test/roundabout/roundabout_353.jpg",
+   "gt": "roundabout",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/roundabout/roundabout_071.jpg",
+   "gt": "roundabout",
+   "pred": "roundabout",
+   "answer": "环岛"
+  },
+  {
+   "image": "data/images/test/roundabout/roundabout_598.jpg",
+   "gt": "roundabout",
+   "pred": "roundabout",
+   "answer": "环岛"
+  },
+  {
+   "image": "data/images/test/roundabout/roundabout_049.jpg",
+   "gt": "roundabout",
+   "pred": "roundabout",
+   "answer": "环岛"
+  },
+  {
+   "image": "data/images/test/runway/runway_215.jpg",
+   "gt": "runway",
+   "pred": "runway",
+   "answer": "飞机跑道"
+  },
+  {
+   "image": "data/images/test/runway/runway_189.jpg",
+   "gt": "runway",
+   "pred": "runway",
+   "answer": "飞机跑道"
+  },
+  {
+   "image": "data/images/test/runway/runway_296.jpg",
+   "gt": "runway",
+   "pred": "runway",
+   "answer": "飞机跑道"
+  },
+  {
+   "image": "data/images/test/runway/runway_196.jpg",
+   "gt": "runway",
+   "pred": "runway",
+   "answer": "飞机跑道"
+  },
+  {
+   "image": "data/images/test/runway/runway_360.jpg",
+   "gt": "runway",
+   "pred": "runway",
+   "answer": "飞机跑道"
+  },
+  {
+   "image": "data/images/test/runway/runway_442.jpg",
+   "gt": "runway",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/runway/runway_385.jpg",
+   "gt": "runway",
+   "pred": "runway",
+   "answer": "飞机跑道"
+  },
+  {
+   "image": "data/images/test/runway/runway_259.jpg",
+   "gt": "runway",
+   "pred": "runway",
+   "answer": "飞机跑道"
+  },
+  {
+   "image": "data/images/test/runway/runway_277.jpg",
+   "gt": "runway",
+   "pred": "airport",
+   "answer": "机场"
+  },
+  {
+   "image": "data/images/test/runway/runway_498.jpg",
+   "gt": "runway",
+   "pred": "runway",
+   "answer": "飞机跑道"
+  },
+  {
+   "image": "data/images/test/sea_ice/sea_ice_520.jpg",
+   "gt": "sea_ice",
+   "pred": "sea_ice",
+   "answer": "海冰"
+  },
+  {
+   "image": "data/images/test/sea_ice/sea_ice_099.jpg",
+   "gt": "sea_ice",
+   "pred": "sea_ice",
+   "answer": "海冰"
+  },
+  {
+   "image": "data/images/test/sea_ice/sea_ice_649.jpg",
+   "gt": "sea_ice",
+   "pred": "sea_ice",
+   "answer": "海冰"
+  },
+  {
+   "image": "data/images/test/sea_ice/sea_ice_134.jpg",
+   "gt": "sea_ice",
+   "pred": "sea_ice",
+   "answer": "海冰"
+  },
+  {
+   "image": "data/images/test/sea_ice/sea_ice_429.jpg",
+   "gt": "sea_ice",
+   "pred": "sea_ice",
+   "answer": "海冰"
+  },
+  {
+   "image": "data/images/test/sea_ice/sea_ice_059.jpg",
+   "gt": "sea_ice",
+   "pred": "island",
+   "answer": "岛屿"
+  },
+  {
+   "image": "data/images/test/sea_ice/sea_ice_221.jpg",
+   "gt": "sea_ice",
+   "pred": "sea_ice",
+   "answer": "海冰"
+  },
+  {
+   "image": "data/images/test/sea_ice/sea_ice_074.jpg",
+   "gt": "sea_ice",
+   "pred": "sea_ice",
+   "answer": "海冰"
+  },
+  {
+   "image": "data/images/test/sea_ice/sea_ice_479.jpg",
+   "gt": "sea_ice",
+   "pred": "snowberg",
+   "answer": "雪山"
+  },
+  {
+   "image": "data/images/test/sea_ice/sea_ice_210.jpg",
+   "gt": "sea_ice",
+   "pred": "sea_ice",
+   "answer": "海冰"
+  },
+  {
+   "image": "data/images/test/ship/ship_617.jpg",
+   "gt": "ship",
+   "pred": "ship",
+   "answer": "船舶"
+  },
+  {
+   "image": "data/images/test/ship/ship_691.jpg",
+   "gt": "ship",
+   "pred": "ship",
+   "answer": "船舶"
+  },
+  {
+   "image": "data/images/test/ship/ship_620.jpg",
+   "gt": "ship",
+   "pred": "ship",
+   "answer": "船舶"
+  },
+  {
+   "image": "data/images/test/ship/ship_216.jpg",
+   "gt": "ship",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/ship/ship_034.jpg",
+   "gt": "ship",
+   "pred": "ship",
+   "answer": "船舶"
+  },
+  {
+   "image": "data/images/test/ship/ship_070.jpg",
+   "gt": "ship",
+   "pred": "ship",
+   "answer": "船舶"
+  },
+  {
+   "image": "data/images/test/ship/ship_003.jpg",
+   "gt": "ship",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/ship/ship_634.jpg",
+   "gt": "ship",
+   "pred": "ship",
+   "answer": "船舶"
+  },
+  {
+   "image": "data/images/test/ship/ship_207.jpg",
+   "gt": "ship",
+   "pred": "ship",
+   "answer": "船舶"
+  },
+  {
+   "image": "data/images/test/ship/ship_397.jpg",
+   "gt": "ship",
+   "pred": "ship",
+   "answer": "船舶"
+  },
+  {
+   "image": "data/images/test/snowberg/snowberg_451.jpg",
+   "gt": "snowberg",
+   "pred": "snowberg",
+   "answer": "雪山"
+  },
+  {
+   "image": "data/images/test/snowberg/snowberg_145.jpg",
+   "gt": "snowberg",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/snowberg/snowberg_594.jpg",
+   "gt": "snowberg",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/snowberg/snowberg_453.jpg",
+   "gt": "snowberg",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/snowberg/snowberg_220.jpg",
+   "gt": "snowberg",
+   "pred": "sea_ice",
+   "answer": "海冰"
+  },
+  {
+   "image": "data/images/test/snowberg/snowberg_179.jpg",
+   "gt": "snowberg",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/snowberg/snowberg_555.jpg",
+   "gt": "snowberg",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/snowberg/snowberg_542.jpg",
+   "gt": "snowberg",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/snowberg/snowberg_107.jpg",
+   "gt": "snowberg",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/snowberg/snowberg_088.jpg",
+   "gt": "snowberg",
+   "pred": "mountain",
+   "answer": "山脉"
+  },
+  {
+   "image": "data/images/test/sparse_residential/sparse_residential_691.jpg",
+   "gt": "sparse_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/sparse_residential/sparse_residential_526.jpg",
+   "gt": "sparse_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/sparse_residential/sparse_residential_536.jpg",
+   "gt": "sparse_residential",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/sparse_residential/sparse_residential_053.jpg",
+   "gt": "sparse_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/sparse_residential/sparse_residential_546.jpg",
+   "gt": "sparse_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/sparse_residential/sparse_residential_194.jpg",
+   "gt": "sparse_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/sparse_residential/sparse_residential_048.jpg",
+   "gt": "sparse_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/sparse_residential/sparse_residential_068.jpg",
+   "gt": "sparse_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/sparse_residential/sparse_residential_037.jpg",
+   "gt": "sparse_residential",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/sparse_residential/sparse_residential_697.jpg",
+   "gt": "sparse_residential",
+   "pred": "mobile_home_park",
+   "answer": "活动房屋区"
+  },
+  {
+   "image": "data/images/test/stadium/stadium_595.jpg",
+   "gt": "stadium",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/stadium/stadium_177.jpg",
+   "gt": "stadium",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/stadium/stadium_344.jpg",
+   "gt": "stadium",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/stadium/stadium_150.jpg",
+   "gt": "stadium",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/stadium/stadium_427.jpg",
+   "gt": "stadium",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/stadium/stadium_319.jpg",
+   "gt": "stadium",
+   "pred": "baseball_diamond",
+   "answer": "棒球场"
+  },
+  {
+   "image": "data/images/test/stadium/stadium_475.jpg",
+   "gt": "stadium",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/stadium/stadium_623.jpg",
+   "gt": "stadium",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/stadium/stadium_643.jpg",
+   "gt": "stadium",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/stadium/stadium_527.jpg",
+   "gt": "stadium",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/storage_tank/storage_tank_255.jpg",
+   "gt": "storage_tank",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/storage_tank/storage_tank_290.jpg",
+   "gt": "storage_tank",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/storage_tank/storage_tank_344.jpg",
+   "gt": "storage_tank",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/storage_tank/storage_tank_195.jpg",
+   "gt": "storage_tank",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/storage_tank/storage_tank_210.jpg",
+   "gt": "storage_tank",
+   "pred": "church",
+   "answer": "教堂"
+  },
+  {
+   "image": "data/images/test/storage_tank/storage_tank_226.jpg",
+   "gt": "storage_tank",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/storage_tank/storage_tank_146.jpg",
+   "gt": "storage_tank",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/storage_tank/storage_tank_515.jpg",
+   "gt": "storage_tank",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/storage_tank/storage_tank_604.jpg",
+   "gt": "storage_tank",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/storage_tank/storage_tank_665.jpg",
+   "gt": "storage_tank",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/tennis_court/tennis_court_386.jpg",
+   "gt": "tennis_court",
+   "pred": "stadium",
+   "answer": "体育场"
+  },
+  {
+   "image": "data/images/test/tennis_court/tennis_court_293.jpg",
+   "gt": "tennis_court",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/tennis_court/tennis_court_572.jpg",
+   "gt": "tennis_court",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/tennis_court/tennis_court_142.jpg",
+   "gt": "tennis_court",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/tennis_court/tennis_court_644.jpg",
+   "gt": "tennis_court",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/tennis_court/tennis_court_419.jpg",
+   "gt": "tennis_court",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/tennis_court/tennis_court_353.jpg",
+   "gt": "tennis_court",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/tennis_court/tennis_court_400.jpg",
+   "gt": "tennis_court",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/tennis_court/tennis_court_617.jpg",
+   "gt": "tennis_court",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/tennis_court/tennis_court_638.jpg",
+   "gt": "tennis_court",
+   "pred": "tennis_court",
+   "answer": "网球场"
+  },
+  {
+   "image": "data/images/test/terrace/terrace_018.jpg",
+   "gt": "terrace",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/terrace/terrace_167.jpg",
+   "gt": "terrace",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/terrace/terrace_114.jpg",
+   "gt": "terrace",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/terrace/terrace_027.jpg",
+   "gt": "terrace",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/terrace/terrace_251.jpg",
+   "gt": "terrace",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/terrace/terrace_599.jpg",
+   "gt": "terrace",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  },
+  {
+   "image": "data/images/test/terrace/terrace_372.jpg",
+   "gt": "terrace",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/terrace/terrace_394.jpg",
+   "gt": "terrace",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/terrace/terrace_380.jpg",
+   "gt": "terrace",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/terrace/terrace_389.jpg",
+   "gt": "terrace",
+   "pred": "rectangular_farmland",
+   "answer": "矩形农田"
+  },
+  {
+   "image": "data/images/test/thermal_power_station/thermal_power_station_367.jpg",
+   "gt": "thermal_power_station",
+   "pred": "thermal_power_station",
+   "answer": "火力发电站"
+  },
+  {
+   "image": "data/images/test/thermal_power_station/thermal_power_station_235.jpg",
+   "gt": "thermal_power_station",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/thermal_power_station/thermal_power_station_064.jpg",
+   "gt": "thermal_power_station",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/thermal_power_station/thermal_power_station_612.jpg",
+   "gt": "thermal_power_station",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/thermal_power_station/thermal_power_station_601.jpg",
+   "gt": "thermal_power_station",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/thermal_power_station/thermal_power_station_376.jpg",
+   "gt": "thermal_power_station",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/thermal_power_station/thermal_power_station_494.jpg",
+   "gt": "thermal_power_station",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/thermal_power_station/thermal_power_station_124.jpg",
+   "gt": "thermal_power_station",
+   "pred": "storage_tank",
+   "answer": "储油罐"
+  },
+  {
+   "image": "data/images/test/thermal_power_station/thermal_power_station_287.jpg",
+   "gt": "thermal_power_station",
+   "pred": "railway_station",
+   "answer": "火车站"
+  },
+  {
+   "image": "data/images/test/thermal_power_station/thermal_power_station_577.jpg",
+   "gt": "thermal_power_station",
+   "pred": "industrial_area",
+   "answer": "工业区"
+  },
+  {
+   "image": "data/images/test/wetland/wetland_481.jpg",
+   "gt": "wetland",
+   "pred": "lake",
+   "answer": "湖泊"
+  },
+  {
+   "image": "data/images/test/wetland/wetland_579.jpg",
+   "gt": "wetland",
+   "pred": "wetland",
+   "answer": "湿地"
+  },
+  {
+   "image": "data/images/test/wetland/wetland_639.jpg",
+   "gt": "wetland",
+   "pred": "wetland",
+   "answer": "湿地"
+  },
+  {
+   "image": "data/images/test/wetland/wetland_035.jpg",
+   "gt": "wetland",
+   "pred": "wetland",
+   "answer": "湿地"
+  },
+  {
+   "image": "data/images/test/wetland/wetland_024.jpg",
+   "gt": "wetland",
+   "pred": "wetland",
+   "answer": "湿地"
+  },
+  {
+   "image": "data/images/test/wetland/wetland_601.jpg",
+   "gt": "wetland",
+   "pred": "bridge",
+   "answer": "桥梁"
+  },
+  {
+   "image": "data/images/test/wetland/wetland_637.jpg",
+   "gt": "wetland",
+   "pred": "wetland",
+   "answer": "湿地"
+  },
+  {
+   "image": "data/images/test/wetland/wetland_089.jpg",
+   "gt": "wetland",
+   "pred": "wetland",
+   "answer": "湿地"
+  },
+  {
+   "image": "data/images/test/wetland/wetland_613.jpg",
+   "gt": "wetland",
+   "pred": "wetland",
+   "answer": "湿地"
+  },
+  {
+   "image": "data/images/test/wetland/wetland_496.jpg",
+   "gt": "wetland",
+   "pred": "golf_course",
+   "answer": "高尔夫球场"
+  }
+ ]
+}
