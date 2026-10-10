@@ -1,0 +1,26 @@
+{
+  "geolens_clean": {
+    "file_name": "../data/instructions_clean.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    }
+  },
+  "geolens_raw_matched": {
+    "file_name": "../data/instructions_raw_matched.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    }
+  },
+  "geolens_raw_full": {
+    "file_name": "../data/instructions_raw.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    }
+  }
+}
