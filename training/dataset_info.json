@@ -22,5 +22,13 @@
       "messages": "conversations",
       "images": "images"
     }
+  },
+  "geolens_weighted": {
+    "file_name": "../data/instructions_weighted.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "images"
+    }
   }
 }

@@ -13,6 +13,7 @@ case $VARIANT in
   clean)       EPOCHS=3.0 ;;
   raw_matched) EPOCHS=3.0 ;;
   raw_full)    EPOCHS=1.0 ;;
+  weighted)    EPOCHS=1.0 ;;
   *) echo "usage: bash train_lora.sh <clean|raw_matched|raw_full>"; exit 1 ;;
 esac
 

@@ -84,3 +84,11 @@
 - 备选：只做 clean vs raw 两对比 / 按预测类做类自适应阈值保覆盖（未实施，列为改进项）
 - 决定：三组对照——**clean**（置信度过滤）vs **raw-matched**（等量随机抽样，隔离数量变量，主对比）vs **raw-full**（全量）；README 中诚实讨论"置信度过滤牺牲长尾类覆盖"的代价及缓解思路
 - 状态：采纳
+
+## D11 消融结论：硬过滤劣于不过滤；v1.5 转向软加权
+
+- 日期：2026-10-10
+- 背景：Phase 4 四组评测完成：zero-shot 24.7% / clean 52.2% / raw-matched 56.2% / raw-full 60.4%
+- 结果分析：clean **输给**等量对照 4 个点。逐类归因：clean 模型 6 个类准确率为 0（CLIP 零样本盲区长尾类被硬过滤完全剔除），harbor 0.10 vs 0.70、mountain 0.30 vs 0.80——**覆盖损失 > 纯度收益**，与 D10 预判一致
+- 决定：v1.5 增加 **weighted** 变体：`instructions_weighted = raw_full + clean 副本`（LLaMA-Factory 0.9.5 无按样本权重列支持，用样本复制等效实现 2× 加权），保留全量覆盖、对高置信样本加权——对齐论文 RLR-VSI 中 CFLR"熵加权软标签"思想。若 weighted ≥ raw-full 则验证"置信度应加权而非丢弃"
+- 状态：试验中（weighted 训练评测进行中）
