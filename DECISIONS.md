@@ -19,13 +19,13 @@
 - 决定：遥感。理由：岗位真实（商业航天/遥感解译）、与计算数学背景契合、痛点可量化（通用 VLM 对俯拍影像幻觉严重）、数据全公开零风险、Demo（卫星图中文问答）演示效果好
 - 状态：采纳
 
-## D3 底座模型：Qwen2-VL-2B 级小参数多模态模型
+## D3 底座模型：Qwen2.5-VL-3B-Instruct
 
-- 日期：2026-10-09
-- 背景：需要本地可推理、A40 可 LoRA 的开源小模型
-- 备选：LLaVA 系 / InternVL2-2B / SmolVLM（超小，兜底用）
-- 决定：Qwen2-VL-2B（中文能力强、LLaMA-Factory 原生支持、社区教程多）；具体版本号在 Phase 0 于 A40 上验证后锁定
-- 状态：采纳（版本待锁定）
+- 日期：2026-10-09（2026-10-10 锁定版本）
+- 背景：需要本地可推理（3060 Laptop 6G，int4）、服务器可 LoRA（32G）的开源小模型
+- 备选：Qwen2-VL-2B（上一代，更小）/ Qwen2.5-VL-7B（本地 Demo 吃紧）/ LLaVA 系 / InternVL / SmolVLM
+- 决定：**Qwen2.5-VL-3B-Instruct**——hf-mirror 已验证可得；较 Qwen2-VL 生成更新、中文与 OCR 更强；3.7B 参数 LoRA 在 32G 显存轻松训练，int4 量化约 2.5-3G 可进本地 6G 显存
+- 状态：采纳
 
 ## D4 训练框架：LLaMA-Factory + LoRA
 
@@ -61,12 +61,12 @@
 - 决定：新建 geolens 环境，torch cu121 + open_clip_torch + pandas + gradio + huggingface_hub
 - 状态：采纳
 
-## D8 算力分工：本地 3060 Laptop 6G 做数据与 Demo，A40 做训练
+## D8 算力分工：本地 3060 Laptop 6G 做数据与 Demo，实验室服务器做训练
 
-- 日期：2026-10-09
-- 背景：实测本地为 3060 Laptop 6GB 显存
-- 备选：本地 QLoRA 兜底训练（已废弃——6GB 跑不动 2B QLoRA）；极端情况可用 SmolVLM-500M 级在本地验证流水线
-- 决定：打标/清洗/Demo 在本地（CLIP fp16 约 1G 显存；Demo 用 int4 量化约 2-3G），LoRA 微调锁定实验室 A40（校园网连接）
+- 日期：2026-10-09（2026-10-10 修订：实际 GPU 为 RTX 5090 32G）
+- 背景：实测本地为 3060 Laptop 6GB 显存；2026-10-10 接入实验室服务器 lab-1（SSH 别名 `lab-1`，私钥免密，无需校园内网），实际为 **RTX 5090 32GB（Blackwell，sm_120）**，32 核 62G 内存，GPU 空闲
+- 备选：本地 QLoRA 兜底训练（已废弃——6GB 跑不动）；极端情况可用 SmolVLM-500M 级在本地验证流水线
+- 决定：打标/清洗/Demo 在本地（CLIP fp16 约 1G 显存；Demo 用 int4 量化约 2-3G），LoRA 微调上 lab-1；**5090 必须用 cu128 版 PyTorch**（cu121/cu124 不支持 sm_120）；服务器文件一律放 `~/xiaopeng/` 总文件夹下，自带独立 miniconda（不碰共享 `~/miniconda3`）
 - 状态：采纳
 
 ## D9 CLIP 打标配置：ViT-B-16-quickgelu + "a centered satellite photo of {}."
