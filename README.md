@@ -2,7 +2,7 @@
 
 用"自动数据构建 + 置信度利用 + LoRA 微调"把通用小型多模态模型适配到遥感影像理解域。
 
-**状态**：✅ Phase 4 全部完成（含 v1.5 软加权验证）。计划详见 [PLAN.md](./PLAN.md)，技术决策见 [DECISIONS.md](./DECISIONS.md)。
+**状态**：✅ 五阶段全部完成（数据引擎 → 微调消融 → Demo 上线）。计划详见 [PLAN.md](./PLAN.md)，技术决策见 [DECISIONS.md](./DECISIONS.md)。
 
 ## 它解决什么问题
 
@@ -37,9 +37,17 @@ LLaMA-Factory LoRA 微调 Qwen2.5-VL-3B（r=16，RTX 5090）
 统一评测（zero-shot 与微调用同一把尺子）→ 上表
 ```
 
-## Demo（待 Phase 5）
+## Demo
 
-上传遥感影像 → 中文问答 / 地物清单。
+Gradio 网页：上传遥感影像 → 中文问答（45 类地物）。已验证：地物识别、二元判断等指令类型均正常回答。
+
+```bash
+# 服务器（bf16，合并 weighted 模型，--share 生成公网链接）
+bash demo/run_demo_server.sh
+
+# 本地低显存（3060 6G，int4 量化加载）
+python demo/app.py --model <合并模型路径> --load4bit
+```
 
 ## 复现
 
