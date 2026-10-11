@@ -1,0 +1,11 @@
+{
+ "tag": "int4-3060",
+ "model": "models/qwen2.5-vl-3b",
+ "quant": "nf4-int4",
+ "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+ "model_load_s": 37.83,
+ "tile_latency_p50_ms": 857.3,
+ "tile_latency_p99_ms": 915.0,
+ "throughput_tiles_per_s": 1.15,
+ "peak_vram_gb": 2.61
+}

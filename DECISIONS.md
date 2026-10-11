@@ -99,3 +99,18 @@
 - 备选：轻量档（纯叙事）/ 中档（仅服务化+基准）/ FastAPI+自写前端（最产品化但前端耗时 1–2 天不划算）/ 纯 Gradio 单体（缺服务层）
 - 决定：FastAPI 做核心分析服务（可被 QGIS/curl 集成）+ Gradio Blocks 做工具界面 + Docker + int4 量化 + 双端基准（bf16@5090 / int4@3060）；低置信窗口导出"人工复核 JSON"作为数据闭环钩子。设计文档：docs/specs/2026-10-11-geolens-studio-design.md
 - 状态：采纳（D1–D4 实施中）
+
+## D13 v2 部署量化：bitsandbytes NF4 int4（双端基准实测）
+
+- 日期：2026-10-11
+- 背景：6G 本地跑 bf16 需 accelerate CPU offload，Windows 上首次推理稳定段错误；AutoAWQ 对 Qwen2.5-VL 的 Windows 支持未验证
+- 决定：**NF4 int4（bitsandbytes 0.50.2）全 GPU 推理**为部署路径。基准（bench/benchmark.py 同口径，verifier=False）：bf16@5090 加载 4.2s / P50 69ms / 14.4 窗每秒 / 7.05GB；int4@3060 加载 37.8s / P50 857ms / 1.15 窗每秒 / **2.61GB**
+- 状态：采纳
+
+## D14 真实数据验证：判读合理 + 域差距诚实暴露
+
+- 日期：2026-10-11
+- 背景：用 2026-08-12 Sentinel-2 鹿特丹港真实场景（云量 0.4%、41km、144 窗）做端到端产品验证
+- 结果：ship 29 窗/工业区/圩田农田判读合理，GeoJSON 输出真实 UTM 坐标；但 CLIP 交叉置信标记 **88% 低置信**——学术训练集（RESISC45，Google Earth 256px）与真实 S2 TCI（10m GSD）域差距显著
+- 决定：作为 README 诚实讨论点与"人工复核闭环"的价值证据，不掩盖；后续方向（v3 可选）：真实 S2 数据上做一轮流水线自举再训练
+- 状态：采纳

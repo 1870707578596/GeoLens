@@ -1,0 +1,11 @@
+{
+ "tag": "bf16-5090",
+ "model": "outputs/merged_weighted",
+ "quant": "bf16",
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "model_load_s": 4.22,
+ "tile_latency_p50_ms": 69.1,
+ "tile_latency_p99_ms": 81.8,
+ "throughput_tiles_per_s": 14.44,
+ "peak_vram_gb": 7.05
+}
