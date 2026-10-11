@@ -92,3 +92,11 @@
 - 结果分析：① clean **输给**等量对照 4 个点——逐类归因：clean 模型 6 个类准确率为 0（CLIP 零样本盲区长尾类被硬过滤整类剔除），harbor 0.10 vs 0.70、mountain 0.30 vs 0.80，覆盖损失 > 纯度收益（与 D10 预判一致）；② weighted（全量 + 高置信 2 倍权重，LLaMA-Factory 无权重列故用样本复制实现）较 raw-full +1.6 点、较 clean +9.8 点——**置信度应加权而非丢弃**，对齐论文 RLR-VSI 中 CFLR 熵加权软标签思想，闭环验证
 - 决定：weighted 为最终发布模型（Phase 5 Demo 用它）；简历叙事采用"硬过滤反例 + 软加权正例"的完整消融故事
 - 状态：采纳
+
+## D12 v2 产品化：GeoLens Studio（FastAPI 引擎 + Gradio 界面 + Docker）
+
+- 日期：2026-10-11
+- 背景：用户反馈 v1 偏科研、缺落地感，选定"重量档（3–5 天）作品集方向"升级：滑窗大图分析、GeoJSON 导出、真实卫星数据、Web 报告、服务化部署
+- 备选：轻量档（纯叙事）/ 中档（仅服务化+基准）/ FastAPI+自写前端（最产品化但前端耗时 1–2 天不划算）/ 纯 Gradio 单体（缺服务层）
+- 决定：FastAPI 做核心分析服务（可被 QGIS/curl 集成）+ Gradio Blocks 做工具界面 + Docker + int4 量化 + 双端基准（bf16@5090 / int4@3060）；低置信窗口导出"人工复核 JSON"作为数据闭环钩子。设计文档：docs/specs/2026-10-11-geolens-studio-design.md
+- 状态：采纳（D1–D4 实施中）
