@@ -21,3 +21,6 @@ runs/
 .vscode/
 .claude/
 Thumbs.db
+
+# 大体积样例影像（按 docs/data-sources.md 重建）
+samples/*.tif
