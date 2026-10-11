@@ -53,12 +53,11 @@
 - 定参结果（全量 31500 张）：CLIP 零样本基线精度 **58.4%**；**max_prob ≥ 0.90** 时保留 11.9%（3738 张）、精度 **97.4%**；熵分位 q=0.1 达 98.0% 精度但保留率同为 ~10%，与 max_prob 高度冗余，主指标取 max_prob、熵作辅助特征
 - 状态：采纳（τ=0.90）
 
-## D7 本地环境：新建 geolens conda 环境（Python 3.11）
+## D7 本地环境：geolens conda（v2 修订：torch 2.7.1+cu126 / transformers 5.19 / bitsandbytes int4）
 
-- 日期：2026-10-09
-- 背景：本机已有环境均不可用——base 为 Python 3.12 无 torch；CLIP 环境为 Python 3.8 + torch 1.7.1（2020 年版本，open_clip 要求更高）；SARLP 环境在服务器不在本机
-- 备选：复用 CLIP 环境 / 在 base 上装
-- 决定：新建 geolens 环境，torch cu121 + open_clip_torch + pandas + gradio + huggingface_hub
+- 日期：2026-10-09（2026-10-11 修订）
+- 背景：v1 环境（torch 2.5.1+cu121）与新版 transformers 5.x 不兼容（`torch.accelerator` 缺失 → 段错误）；bf16 + accelerate CPU offload 在 Windows 上加载后首次推理稳定段错误（exit 139）
+- 决定：本地升级为 **torch 2.7.1+cu126 + transformers 5.19.0 + bitsandbytes 0.50.2**；6G 显存本地推理一律走 **NF4 int4 量化**（3.7B ≈ 2.2GB 显存，全 GPU 无 offload），冒烟通过（mountain/harbor 双例正确）；另装 rasterio 1.4.4（GeoTIFF/COG 窗口读取）
 - 状态：采纳
 
 ## D8 算力分工：本地 3060 Laptop 6G 做数据与 Demo，实验室服务器做训练
